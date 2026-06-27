@@ -16,6 +16,8 @@ Let's see in practice how to create an alert.
     - **Service Level Objective** — define a reliability target and Logfire wires up the burn-rate alerts automatically. Best when you have a clear contract (uptime, latency, error budget).
     - **Templates** — ready-to-tune alerts for common cases: exceptions, HTTP 5xx, slow database queries, LLM errors, queue backlog, and more. Each one prefills the name, description, query, and evaluation timing — you just tune the threshold and pick a channel.
 
+![New alert picker](../../images/guide/browser-alerts-new.png)
+
 Click **Customize** on any template (or **Start** on the custom-query card) to open the create form.
 
 ![Create alert form](../../images/guide/browser-alerts-create.png)
