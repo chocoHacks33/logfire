@@ -41,7 +41,7 @@ WHERE
 
 The **When this alert fires** section controls the evaluation: a **Fire when** condition (see [Notification modes](#notification-modes) below), a **Look at rows from** lookback window, and a **Check every** cadence. A friendly preview line under the controls spells out the resulting behavior in plain English.
 
-The **Send notifications to** section is where you pick one or more notification channels. Without a channel the alert still evaluates and shows up on the Alerts page — it just won't notify anyone outside Logfire. See [Notification Channels](#notification-channels) below for the supported types.
+The **Send notifications to** section is where you pick one or more notification channels. Without a channel the alert still evaluates and shows up on the Alerts page — it just won't notify anyone outside Logfire.
 
 After filling in the form, click **Create alert**. And... Alert created! :tada:
 
@@ -84,19 +84,19 @@ The list below has one row per alert with:
 
 - **State** — a colored dot + label (`• Firing`, `• OK`, `• Snoozed`, `• Flapping`, `• No data`).
 - **Activity** — a per-row sparkline of recent firings. Hover any bar to see whether the bucket was clear, snoozed, before the alert existed, or the alert was disabled during it.
-- **Channels**, **Last run**, **Next run** — when the alert last ran and when it's scheduled next (or *paused* / *snoozed* / `after 23 minutes` when applicable).
+- **Channels**, **Last run**, **Next run** — when the alert last ran and when it's scheduled next. For a disabled alert this reads *disabled*; for a snoozed one it shows when notifications resume (e.g. *after 23 minutes*).
 
 Group the list by state, channel, or snooze status with the **Group by** dropdown, or filter by name with the search input.
 
 ## Snoozing
 
-Use the **Snooze** action on a row to pause both evaluation and notifications until a deadline you pick (30m, 1h, 4h, 1d, 3d, 1w, or a custom timestamp). Snoozed alerts still appear in the list with a `• Snoozed` pill and a *Next run after X* timestamp; they resume automatically when the snooze expires.
+Use the **Snooze** action on a row to mute notifications until a deadline you pick (30m, 1h, 4h, 1d, 3d, 1w, or a custom timestamp). Evaluation keeps running on the normal cadence — the timeline and Runs history record what fired during the mute — but the worker drops the notification. Snoozed alerts appear in the list with a `• Snoozed` pill and a *Next run after X* timestamp, and notifications resume automatically when the snooze expires.
 
 You can also select multiple rows with the checkboxes and snooze them together — a floating action bar appears at the bottom of the screen with **Snooze selected** and **Clear**.
 
 ## Edit an alert
 
-Click an alert's name to open the detail page. The top of the page summarizes the current state in plain English (e.g. *"Firing — 1 match in the last run"* or *"Snoozed until Jun 27, 2026 at 14:30 — both evaluation and notifications are paused."*) and surfaces the right action inline (Unsnooze when snoozed, Snooze otherwise).
+Click an alert's name to open the detail page. The top of the page summarizes the current state in plain English (e.g. *"Firing — 1 match in the last run"* or *"Snoozed until Jun 27, 2026 at 14:30 — notifications paused, evaluation continues."*) and surfaces the right action inline (Unsnooze when snoozed, Snooze otherwise).
 
 Below the status callout, a **Setup** card shows the firing condition, schedule, notification channels, environment filter, and the SQL query (collapsed by default). A **Runs history** list at the bottom shows every run in the selected time window — expand a row to see the matched rows.
 
