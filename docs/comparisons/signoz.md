@@ -1,6 +1,6 @@
 # Logfire vs SigNoz
 
-SigNoz is an open-source observability platform available as both a self-hosted solution and a managed cloud service. Logfire is an AI-native observability platform, also built on OpenTelemetry, with full-stack monitoring capabilities and (Enterprise) self=hosting options. Both platforms support logs, traces, and metrics, but they serve different needs..
+SigNoz is an open-source observability platform available as both a self-hosted solution and a managed cloud service. Logfire is an AI-native observability platform, also built on OpenTelemetry, with full-stack monitoring capabilities and (Enterprise) self-hosting options. Both platforms support logs, traces, and metrics, but they serve different needs..
 
 This comparison covers both SigNoz deployment options so you can make an informed choice.
 
@@ -47,7 +47,7 @@ Three lines and you're observing AI calls. SigNoz uses standard OpenTelemetry in
 
 **SDK flexibility.** The Logfire SDK can send data to any OTel-compatible backend, including SigNoz. If you like our SDK's simplicity but want to use their backend, you can.
 
-**Pricing** includes 10M traces for free. [Paid plans](https://pydantic.dev/pricing/?utm_source=signoz_comparison_docs) start at $49/mo with 10M spans included, then $2 per million spans after that. That's it. No host fees, no custom metrics fees, no ingestion surprises.
+**Pricing** includes 10M spans/logs/metrics per month for free. [Paid plans](https://pydantic.dev/pricing/?utm_source=signoz_comparison_docs) start at $49/mo with 10M spans included, then $2 per million spans after that. That's it. No host fees, no custom metrics fees, no ingestion surprises.
 
 
 ### When to Choose Each
